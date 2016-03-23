@@ -4,4 +4,7 @@ export class Keg {
   getPercentage(){
     return ((this.pints)/124 * 100).toFixed(1);
   }
+  getPintPrice() {
+    return Math.ceil((this.price)/62 * 1.6);
+  }
 }

@@ -9,7 +9,8 @@ var percent = 0;
   template: `
     <div (click)="kegClicked(keg)" class="col-sm-8">
       <h4 class="list-group-item-heading">{{ keg.brand }} {{ keg.name }} </h4>
-      <p class="list-group-item-text">Price: \${{ keg.price }}</p>
+      <p class="list-group-item-text">Keg price: \${{ keg.price }}</p>
+      <p class="list-group-item-text">Pint price: \${{ keg.getPintPrice() }}</p>
       <p class="list-group-item-text">ABV: {{keg.ABV}}%</p>
       <p class="list-group-item-text">Remaining: {{ keg.pints }} Pints</p>
     </div>

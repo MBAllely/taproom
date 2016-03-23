@@ -23,7 +23,10 @@ export class AppComponent {
       new Keg("Amber", "Alaskan", 180, 5.3, 1),
       new Keg("Nocturnum", "Delirium", 600, 8.5, 2),
       new Keg("Mirror Pond", "Deschutes", 180, 5, 3),
-      new Keg("High Life", "Miller", 125, 4.7, 4)
+      new Keg("High Life", "Miller", 125, 4.7, 4),
+      new Keg("Pear Cider", "Wyder's", 190, 4, 5),
+      new Keg("ESB", "Fuller's", 235, 5.9, 6),
+      new Keg("Stone Saison", "Stone Brewing", 330, 6, 7)
     ];
   }
 }
