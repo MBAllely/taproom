@@ -10,3 +10,12 @@
 .keg-form {
   margin-bottom: 20px;
 }
+
+.beer {
+  height: 100px;
+  &:hover {
+    content: url('/resources/images/beer.jpg');
+
+
+  }
+}
