@@ -13,5 +13,5 @@ import { Keg } from './keg.model';
 })
 
 export class KegComponent {
-  public keg: Keg;
+
 }
