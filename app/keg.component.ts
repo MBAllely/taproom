@@ -6,10 +6,12 @@ import { Keg } from './keg.model';
   inputs: ['keg'],
   outputs: ['onKegSelect'],
   template: `
-    <h4 class="list-group-item-heading" (click)="kegClicked(keg)">{{ keg.brand }} {{ keg.name }} </h4>
-    <p class="list-group-item-text">Price: \${{ keg.price }}</p>
-    <p class="list-group-item-text">ABV: {{keg.ABV}}%</p>
-    <p class="list-group-item-text">Remaining: {{ keg.pints }} Pints</p>
+    <div (click)="kegClicked(keg)">
+      <h4 class="list-group-item-heading">{{ keg.brand }} {{ keg.name }} </h4>
+      <p class="list-group-item-text">Price: \${{ keg.price }}</p>
+      <p class="list-group-item-text">ABV: {{keg.ABV}}%</p>
+      <p class="list-group-item-text">Remaining: {{ keg.pints }} Pints</p>
+    </div>
   `
 })
 

@@ -20,9 +20,10 @@ export class AppComponent {
   constructor() {
     this.kegs = [
       new Keg("White", "Alaskan", 180, 5.3, 0),
-      new Keg("Nocturnum", "Delirium", 600, 8.5, 1),
-      new Keg("Mirror Pond", "Deschutes", 180, 5, 2),
-      new Keg("High Life", "Miller", 125, 4.7, 3)
+      new Keg("Amber", "Alaskan", 180, 5.3, 1),
+      new Keg("Nocturnum", "Delirium", 600, 8.5, 2),
+      new Keg("Mirror Pond", "Deschutes", 180, 5, 3),
+      new Keg("High Life", "Miller", 125, 4.7, 4)
     ];
   }
 }
