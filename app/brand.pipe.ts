@@ -15,7 +15,10 @@ export class BrandPipe implements PipeTransform {
       return input;
     } else {
       return input.filter((keg) => {
-        return keg.brand.includes(args[0]);
+        var brand = keg.brand.toLowerCase();
+        var searchString = args[0].toLowerCase();
+        var name = keg.name.toLowerCase();
+        return (brand.includes(searchString) || name.includes(searchString));
       });
     }
   }
