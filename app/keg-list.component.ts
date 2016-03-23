@@ -5,11 +5,12 @@ import { NewKegComponent } from './new-keg.component';
 import { EditKegComponent } from './edit-keg.component';
 import { BrandPipe } from './brand.pipe';
 import { LowPipe } from './low.pipe';
+import { PremiumPipe } from './premium.pipe';
 
 @Component ({
   selector: 'keg-list',
   inputs: ['kegList'],
-  pipes: [BrandPipe, LowPipe],
+  pipes: [BrandPipe, LowPipe, PremiumPipe],
   directives: [KegComponent, NewKegComponent, EditKegComponent],
   template: `
     <div class="row">
@@ -20,6 +21,7 @@ import { LowPipe } from './low.pipe';
             [keg]="currentKeg"
             class="list-group-item row"
             [class.active]="currentKeg === selectedKeg"
+            [class.expensive]="currentKeg | premium"
             (onKegSelect)="kegToEdit($event)">
           </keg-display>
         </div>
