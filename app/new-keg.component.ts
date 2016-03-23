@@ -21,7 +21,6 @@ export class NewKegComponent {
     this.newKeg = new EventEmitter();
   }
   addKeg(name: HTMLInputElement, brand: HTMLInputElement, price: HTMLInputElement, ABV: HTMLInputElement) {
-    console.log(name);
     this.newKeg.emit([name.value, brand.value, parseFloat(price.value), parseFloat(ABV.value)]);
     name.value = '';
     brand.value = '';

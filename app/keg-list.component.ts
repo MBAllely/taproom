@@ -8,7 +8,6 @@ import { EditKegComponent } from './edit-keg.component';
 @Component ({
   selector: 'keg-list',
   inputs: ['kegList'],
-  outputs: ['sendKegToEdit'],
   directives: [KegComponent, NewKegComponent, EditKegComponent],
   template: `
     <new-keg (newKeg)="createKeg($event)"></new-keg>
@@ -27,18 +26,13 @@ import { EditKegComponent } from './edit-keg.component';
 
 export class KegListComponent {
   public kegList: Keg[];
-  //public sendKegToEdit: EventEmitter<Keg>;
   public selectedKeg: Keg;
-  // constructor() {
-  //   this.sendKegToEdit = new EventEmitter();
-  // }
   createKeg(values) {
     var keg = new Keg(values[0], values[1], values[2], values[3], this.kegList.length);
     this.kegList.push(keg);
   }
   kegToEdit(thisKeg: Keg) {
     this.selectedKeg = thisKeg;
-    //this.sendKegToEdit.emit(thisKeg);
     console.log(thisKeg);
   }
 
